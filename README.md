@@ -1,10 +1,10 @@
-# [React}(https://react.dev/) + [Vite](https://vitejs.dev/) Project Setup
+# [React](https://react.dev/) + [Vite](https://vitejs.dev/) Project Setup Guide
 
 ![React logo](https://i.makeagif.com/media/11-21-2022/imisbt.gif)
 
 ------
 
-## Folder Structure
+## Folder Structure for React + REST API
 ```
 | [ROOT]
   | node_modules			[DO NOT MODIFY – managed by npm]
@@ -126,7 +126,19 @@ npm install react-router-dom
 
 - Alternatively, use the following command (for linux and git bash)
 ```
-printf "@tailwind base;\n@tailwind components;\n@tailwind utilities;" > ./src/index.css
+cat > ./src/index.css << EOF
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+}
+@layer components{
+}
+@layer utilities{
+}
+EOF
+
 ```
 
 ## Modify Tailwind Config Content Value
@@ -178,9 +190,10 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Page Example **/}
         <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<h2>About</h2>} />
-        <Route path="/services" element={<h2>Services</h2>} />
+        {/* Not Found Page Uses **/}
+        <Route path="*" element={<h2>Not Found</h2>} />
       </Routes>
     </Router>
   );
@@ -299,6 +312,7 @@ npm install react-markdown
 ```
 npm install react-slick slick-carousel --save
 ```
+> [Original Slick Slider website with demos & documentation](https://kenwheeler.github.io/slick/)
 
 #### [React pdfobject](https://www.npmjs.com/package/react-pdfobject) (for PDF Modal)
 ````
@@ -313,13 +327,13 @@ npm install react-modal-image
 -----
 
 ### Want to Install all of the packages mentioned above?
-Use soemthing like this
+Use something like this
 > npm i -D tailwindcss postcss autoprefixer react-router-dom react-icons formik yup @tanstack/react-query react-slick slick-carousel react-pdfobject react-modal-image react-markdown
 
 -----
 
 ## Final Notes
-- This README provides a structured approach to setting up a React project with Vite, TailwindCSS, and React Router DOM.
+- This README provides an example structured approach to setting up a React project with Vite, TailwindCSS, and React Router DOM.
 - Follow the instructions carefully to ensure proper setup and configuration.
 - Refer to the folder structure to understand where to place your files and components.
 
