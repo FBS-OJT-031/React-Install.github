@@ -1,29 +1,83 @@
 # React + Vite Project Setup
 
+![React logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+
 ## Folder Structure
 
-<pre>
+```
 | [ROOT]
-| node_modules [DO NOT MODIFY – managed by npm]
-| public [served as root directory on node server run]
-| img {folder added for image media}
-| src [included with vite-react – required for react js]
-|   | App.jsx [modify this to add routes to connect react pages]
-|   | index.css [css and Tailwind imports here]
-|   | main.jsx [DO NOT MODIFY - default vite-react]
-|   | components {added to store react js components, partials & pages}
-|   | helpers {folder added for global values}
-|   |   | functions-general.jsx {global values here}
-|   | pages {folder added to store pages}
-|       | Home
-|       |   | Home.jsx
-|       | data.js {sample data to retrieve data from | see sample below}
-|       | Menu
-|       |   | Menu.jsx
-|   | partials {folder store partials of pages}
-|       | Header.jsx {header partial}
-|       | Footer.jsx {footer partial}
-</pre>
+  | node_modules			[DO NOT MODIFY – managed by npm]
+
+  | fonts				[store fonts here]
+
+  | public				[served as root directory on node server run]
+    | img				[folder added for image media]
+
+  | rest				[REST API STUFF (in php)]
+    | v1				[REST API version]
+      | controllers			[folder for storing controllers per DB tablemodel]
+        | Home			        [folder for storing API files for Home page (connected to Home.php model)]
+          | active.php			{table row active status update}
+          | create.php		        {table row insert/create}
+          | delete.php			{table row delete}
+          | read.php			{table retrieve}
+          | search.php		        {table row search}
+          | update.php		        {table row update}
+          | home.php			{connects to other db table transactions in the same folder}
+
+      | core			        [folder for storing common DB stuff]
+        | Database.php		        {stores connection info for DB (dbms credentials and db name stored here)}
+        | Encryption.php		{reusable encryption functions}
+        | functions.php		        {reusable db functions in php for REST}
+        | header.php			{php header for api access}
+        | Response.php		        {handles returning http code responses}
+        | upload-photo.php		{handles php image file upload to public/img}
+
+      | jwt				[folder for storing JWT (JSON Web Token) stuff]
+
+      | models			        [folder for storing DB table models (per table or view being utilized)]
+        | Home.php			{stores SQL queries and is used by corresponding controller}
+
+      | notification			[folder for notification email mailer (i.e. PHPMailer) and corresponding templates]
+
+      | .htaccess			{add stuff for rewriting page links here}
+
+  | src				        [included with vite-react – required for react js]
+    | App.jsx			        {modify this to add routes to connect react pages}
+    | index.css			        {css and Tailwind imports here}
+    | main.jsx			        [DO NOT MODIFY - default vite-react]
+
+    | components			[for storing react js components, partials & pages]
+      | helpers			        [folder added for global values]
+        | functions-general.jsx		{global values here}
+        | Form-Input.jsx		{reusable inputs here here}
+        | queryData.jsx		        {helper for converting db data entries to json format}
+
+    | custom-hook			[for storing custom-hook files]
+        | useQueryData.jsx		{connects with queryData and tanstack/react-query to retrieve db table rows}
+        | useSystemLogin.jsx		{for handling logins and creating login tokens on local storage (requires localstorage function to be at functions-general)}
+        | useUploadPhoto.jsx		{connects to upload-photo.php}
+
+      | pages			        [folder added to store pages]
+        | Home			        [folder for Home page]
+          | Home.jsx			{Home page jsx}
+          | data.js			{placeholder primitive db using json format array}
+        | Menu			        [folder for Menu page]
+          | Menu.jsx			{Menu page jsx}
+
+      | partials			[folder store partials of pages]
+        | modals			[for reused modals]
+        | spiners			[for reused spinners]
+        | svg			        [for reused svg files (saved as jsx but contains svg element)]
+        | Header.jsx			{header partial}
+        | Footer.jsx			{footer partial}
+
+    | store		                [for storing react store context (necessary to connect all 3 files together)]
+      | StoreAction.jsx		        {exports setters for variables in StoreContext (accessed through dispatch)}
+      | StoreContext.jsx		{contains StoreContext, StoreProvider wrapper, and store variables (accessed through store)}
+      | StoreReducer.jsx		{contains switch condition to set state of store variables}
+
+```
 
 
 # Setup Instructions
@@ -58,6 +112,13 @@ npm install react-router-dom
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+}
+@layer components{
+}
+@layer utilities{
+}
 ```
 
 - Alternatively, use the following command (for linux and git bash)
