@@ -1,9 +1,10 @@
-# React + Vite Project Setup
+# [React}(https://react.dev/) + [Vite](https://vitejs.dev/) Project Setup
 
-![React logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+![React logo](https://i.makeagif.com/media/11-21-2022/imisbt.gif)
+
+------
 
 ## Folder Structure
-
 ```
 | [ROOT]
   | node_modules			[DO NOT MODIFY – managed by npm]
@@ -92,6 +93,8 @@ npm create vite@latest .
 
 ## Install and Initialize TailwindCSS
 
+###### *Note 1: "npm install" and "npm i" are the same*
+###### *Note 2: multiple npm packages can be installed at the same time like the example below*
 ```
 npm install -D tailwindcss postcss autoprefixer
 ```
@@ -151,7 +154,7 @@ module.exports = {
 ```
 
 ## Cleanup Vite Defaults
-- Delete the default Vite assets like assets folder & app.css.
+- Delete the default Vite assets like assets folder {./src/assets} & app.css.
 - Add empty App.jsx contents:
 
 ```
@@ -248,91 +251,76 @@ export const baseImgUrl = "../../img"; // Relative path to img folder
 ```
 
 ------
+
+## [Dynamic Page Titles](https://www.youtube.com/watch?v=M-Cckbc0hKA)
+#### ADD THE CODE BELOW TO functions-general.jsx:
+````
+// for page title
+export const PageTitle = (newTitle) => {
+  return (document.title = newTitle);
+};
+`````
+#### CALL IT PER PAGE LIKE BELOW:
+````
+PageTitle("Blog - Blogee Website");
+````
+
+
+------
+
+### Other npm packages
+#### [React Icons](https://www.npmjs.com/package/react-icons) (for importing various icon libraries)
+```
+npm install react-icons --save
+```
+
+#### [Formik](https://www.npmjs.com/package/formik) (for Forms)
+```
+npm install formik
+```
+
+#### [Yup](https://www.npmjs.com/package/yup) (for Form validation)
+```
+npm install yup
+```
+
+#### [Tanstack React Query](https://tanstack.com/query/v3/docs/framework/react/overview) (for db query)
+```
+npm install @tanstack/react-query
+```
+
+#### [React Markdown](https://www.npmjs.com/package/react-markdown) (for converting markdown to html-jsx elements)
+```
+npm install react-markdown
+```
+> Reference for Markdown [Markdownguide.org](https://www.markdownguide.org/cheat-sheet/)
+
+#### [React Slick](https://react-slick.neostack.com/docs/get-started) (Slick Slider)
+```
+npm install react-slick slick-carousel --save
+```
+
+#### [React pdfobject](https://www.npmjs.com/package/react-pdfobject) (for PDF Modal)
+````
+npm install react-pdfobject
+````
+
+#### [React Modal Image](https://www.npmjs.com/package/react-modal-image) (for Image Modal lighter than Lightbox)
+````
+npm install react-modal-image
+````
+
+-----
+
+### Want to Install all of the packages mentioned above?
+Use soemthing like this
+> npm i -D tailwindcss postcss autoprefixer react-router-dom react-icons formik yup @tanstack/react-query react-slick slick-carousel react-pdfobject react-modal-image react-markdown
+
+-----
+
 ## Final Notes
 - This README provides a structured approach to setting up a React project with Vite, TailwindCSS, and React Router DOM.
 - Follow the instructions carefully to ensure proper setup and configuration.
 - Refer to the folder structure to understand where to place your files and components.
 
-### Other npm
-
-- [React Icons](https://www.npmjs.com/package/react-icons)
-```
-npm install react-icons --save
-```
-
-- [Formik](https://www.npmjs.com/package/formik)
-```
-npm install formik
-```
-
-- [Yup](https://www.npmjs.com/package/yup)
-```
-npm install yup
-```
-
-- [Tanstack React Query](https://tanstack.com/query/v3/docs/framework/react/overview)
-```
-npm install @tanstack/react-query
-```
-
-- [React Markdown](https://www.npmjs.com/package/react-markdown)
-```
-npm install react-markdown
-```
-
-- [React Slick](https://react-slick.neostack.com/docs/get-started)
-```
-npm install react-slick slick-carousel --save
-```
-
-https://www.markdownguide.org/cheat-sheet/
-
-
-> 
-You can save this content as `README.md` in the root directory of your GitHub repository. This guide provides a clear and comprehensive setup process for a React project using Vite.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> You can save this content as `README.md` in the root directory of your GitHub repository. This guide provides a clear and comprehensive setup process for a React project using Vite.
