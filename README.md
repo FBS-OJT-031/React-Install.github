@@ -83,13 +83,18 @@
 
 # Setup Instructions
 
-## Setup React
+## Setup React + Vite
 ```
 npm create vite@latest .
 ```
 
 1. Select Framework: **React**
 2. Select Variant: **JavaScript**
+
+## Setup React + Vite (One line version)
+```
+npm create vite@latest . -- --template react
+```
 
 ## Install and Initialize TailwindCSS
 
@@ -327,8 +332,28 @@ npm install react-modal-image
 -----
 
 ### Want to Install all of the packages mentioned above?
-Use something like this
+Command:
 > npm i -D tailwindcss postcss autoprefixer react-router-dom react-icons formik yup @tanstack/react-query react-slick slick-carousel react-pdfobject react-modal-image react-markdown
+
+### Install Node packages used until react portfolio project
+Command:
+> npm i -D tailwindcss postcss autoprefixer react-router-dom react-icons formik yup @tanstack/react-query --save
+
+-----
+
+### Check outdated Node packages
+Command:
+> npm outdated
+
+### Update Node packages
+Command:
+> npm update
+
+-----
+
+## Setup React + Vite with packages for Router, Tailwind CSS, React icons, Formik, Yup, React-query
+Command: 
+> npm create vite@latest . -- --template react && npm i -D tailwindcss postcss autoprefixer react-router-dom react-icons formik yup @tanstack/react-query --save
 
 -----
 
