@@ -99,7 +99,7 @@ npm create vite@latest . -- --template react
 ## Install and Initialize TailwindCSS
 
 ###### *Note 1: "npm install" and "npm i" are the same*
-###### *Note 2: multiple npm packages can be installed at the same time like the example below*
+###### *Note 2: multiple npm packages can be installed at the same time like the example below and those near the end of this readme*
 ```
 npm install -D tailwindcss postcss autoprefixer
 ```
@@ -205,10 +205,16 @@ function App() {
 }
 export default App;
 ```
+
+------
+
 ## Run the Project
 ```
 npm run dev
 ```
+
+------
+
 ## Additional Notes
 ### ES7+ React/Redux/React-Native snippets (VSCode)
 - Install the ES7+ React/Redux/React-Native snippets extension by dsznajder.
@@ -226,8 +232,10 @@ const Home = () => {
 export default Home;
 ```
 
+------
+
 ## Using React Router DOM
-- Router, Routes, Route
+### Router, Routes, Route
 ```
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
@@ -245,7 +253,7 @@ function App() {
 }
 export default App;
 ```
-- Link
+### Link
 ```
 import { Link } from 'react-router-dom';
 
@@ -260,6 +268,7 @@ const NavBar = () => {
 }
 export default NavBar;
 ```
+------
 
 ## functions-general.jsx
 ```
@@ -357,7 +366,7 @@ Command:
 
 -----
 
-# Setup React + Vite with packages for Router, Tailwind CSS, React icons, Formik, Yup, React-query
+# Setup React + Vite with packages for Router, Tailwind CSS, React icons, Formik, Yup, React-query (One line version)
 Command: 
 > npm create vite@latest . -- --template react && npm i -D tailwindcss postcss autoprefixer react-router-dom react-icons formik yup @tanstack/react-query --save
 
@@ -372,4 +381,4 @@ Command:
 - You can save this content as `README.md` in the root directory of your GitHub repository. This guide provides a clear and comprehensive setup process for a React project using Vite.
 
 
-- Alternatively clone this repository and use the [`"react-tailwind-boilerplate"`](https://github.com/FBS-OJT-031/React-Install.github/main/react-tailwind-boilerplate) folder as your starting point
+- Alternatively clone this repository and use the [`react-tailwind-boilerplate`](https://github.com/FBS-OJT-031/React-Install.github/tree/main/react-tailwind-boilerplate) folder as your starting point
