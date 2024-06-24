@@ -1,0 +1,43 @@
+# Add ignore for react-tailwind-boilerplate files
+
+# Logs
+react-tailwind-boilerplate/logs
+react-tailwind-boilerplate/*.log
+react-tailwind-boilerplate/npm-debug.log*
+react-tailwind-boilerplate/yarn-debug.log*
+react-tailwind-boilerplate/yarn-error.log*
+react-tailwind-boilerplate/pnpm-debug.log*
+react-tailwind-boilerplate/lerna-debug.log*
+
+react-tailwind-boilerplate/node_modules
+react-tailwind-boilerplate/dist
+react-tailwind-boilerplate/dist-ssr
+react-tailwind-boilerplate/*.local
+
+# Editor directories and files
+react-tailwind-boilerplate/.vscode/*
+react-tailwind-boilerplate/!.vscode/extensions.json
+react-tailwind-boilerplate/.idea
+react-tailwind-boilerplate/.DS_Store
+react-tailwind-boilerplate/*.suo
+react-tailwind-boilerplate/*.ntvs*
+react-tailwind-boilerplate/*.njsproj
+react-tailwind-boilerplate/*.sln
+react-tailwind-boilerplate/*.sw?
+
+# ignore img folder
+react-tailwind-boilerplate/public/img/
+
+# ignore fonts
+react-tailwind-boilerplate/fonts/
+
+# ignore rest stuff
+#react-tailwind-boilerplate/rest/*/*
+react-tailwind-boilerplate/apiKey.php
+react-tailwind-boilerplate/rest/v1/jwt/*
+react-tailwind-boilerplate/rest/v1/notification/*
+react-tailwind-boilerplate/rest/v1/notification/PHPMailer
+react-tailwind-boilerplate/rest/v1/notification/mail-config.php
+
+# ignore database sql schema dump
+react-tailwind-boilerplate/*.sql
